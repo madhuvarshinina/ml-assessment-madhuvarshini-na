@@ -13,9 +13,9 @@ This is a **supervised regression problem** because the output is a continuous n
 ### (b)
 Using revenue alone can be misleading because it is influenced by pricing and discount levels. For example, a high discount may increase revenue but not reflect actual customer demand.
 
-In contrast, **items sold directly measures customer response** to a promotion, making it a more reliable indicator of effectiveness.
+but In contrast, **items sold directly measures customer response** to a promotion, making it a more reliable indicator of effectiveness.
 
-This highlights an important machine learning principle: the target variable should align closely with the real business objective being optimised.
+This shows an important machine learning principle: the target variable should align closely with the real business objective being optimised.
 
 
 
@@ -65,7 +65,7 @@ Since 80% of transactions occur without promotions, the dataset is imbalanced.
 This may bias the model towards predicting lower sales values associated with non-promotional periods.
 
 To address this:
-- Add a binary feature indicating whether a promotion is applied  
+- Add a binary feature showing whether a promotion is applied  
 - Use sampling techniques to balance promotional data  
 - Apply weighting to give more importance to promotional cases  
 
@@ -76,7 +76,7 @@ To address this:
 ### (a)
 A **time-based split** should be used, where earlier data is used for training and more recent data is used for testing.
 
-A random split is inappropriate because it can cause data leakage, where future information influences the training process.
+A random split is not appropriate because it can cause data leakage, where future information influences the training process.
 
 Evaluation metrics:
  **RMSE** to penalise large prediction errors  
@@ -87,11 +87,11 @@ These metrics help evaluate how close predictions are to actual sales.
 
 
 ### (b)
-Feature importance can help explain why different promotions are recommended for the same store at different times.
+Feature Importance can help explain why different promotions are recommended for the same store at different time frames.
 
 For example:
  Seasonal features such as month or festival indicators may influence promotion effectiveness  
- Location-based features may affect customer behaviour  
+ Location based features may affect customer behaviour  
 
 This can be communicated to the marketing team using feature importance charts and simple explanations linking key factors to model decisions.
 
@@ -101,7 +101,7 @@ This can be communicated to the marketing team using feature importance charts a
 The trained model can be saved using tools like **joblib** or **pickle**.
 
 Each month:
- New data is collected  
+ fesh new data is collected  
  The same preprocessing pipeline is applied  
  The model generates predictions for each store  
 
@@ -110,4 +110,6 @@ Monitoring should include:
  Comparing predicted vs actual sales  
  Setting thresholds to detect performance degradation  
 
-If performance drops significantly, the model should be retrained using updated data.
+If performance decreases significantly, the model should be retrained using updated data.
+
+This approach ensures better real-world applicability.
